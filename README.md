@@ -1,19 +1,10 @@
 # Bootloader
 A simple bootloader, that includes -
-Protected mode, GDT, crossing 512 bytes, etc...
+Protected mode, GDT, etc...
 
-Following this [blog post](http://3zanders.co.uk/2017/10/13/writing-a-bootloader/).
-
-# Compile
-```bash
-nasm -f bin src/boot.asm -o ~/Desktop/boot.bin
-```
+Following this [blog post](https://dev.to/frosnerd/writing-my-own-boot-loader-3mld).
 
 # Run with QEMU
 ```bash
-qemu-system-x86_64 -fda boot.bin
+make -f MakeFile
 ```
-
-# Todo
--  Seperate to different files.
-- Compile it with a C++ code to experiment a real os scenario.
